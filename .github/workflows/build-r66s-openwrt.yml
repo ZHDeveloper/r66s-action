@@ -302,7 +302,7 @@ jobs:
     # 将 OpenWrt 固件上传到 Artifacts
     - name: Upload OpenWrt To Artifact
       if: env.PACKAGED_STATUS == 'success' && env.UPLOAD_ARTIFACT == 'true'
-      uses: haiibo/upload-artifact-as-is@master
+      uses: actions/upload-artifact@master
       with:
         path: ${{ env.PACKAGED_OUTPUTPATH }}
 
